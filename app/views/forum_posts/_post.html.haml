@@ -1,0 +1,18 @@
+.forum_text
+  .author_panel
+    = link_to image_tag(set_icon(post.owner,'small')), post.owner
+    .profile_links
+      %div
+        %strong= link_to post.owner.full_name, post.owner
+      Location:
+      = link_to post.owner.location
+      %div
+        Group:
+        = post.owner.group
+      %div
+        Posted:
+        = post.created_at.to_date.to_formatted_s(:rfc822)
+  .message_panel
+    %div= post.body
+    - if @is_admin || post.by_me?(@p)
+      .delete_post= link_to "Delete Post" , forum_forum_topic_forum_post_path(post.topic.forum,post.topic,post), :method => :delete

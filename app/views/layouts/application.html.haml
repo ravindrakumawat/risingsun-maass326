@@ -1,0 +1,43 @@
+%html
+  %head
+    %link{:href => "/favicon.ico", :rel => "shortcut icon" }
+    %title= @title || (SITE_NAME + ": " + SITE_FULL_NAME)
+    = stylesheet_link_tag "application",'jquery-ui-1.8.7.custom','formtastic','formtastic_changes','skin','thickbox','galleriffic','jcarousel'
+    = javascript_include_tag 'jquery.min','jquery-ui.min','application','rails','rs_maps', 'jquery-ui-timepicker-addon', 'jquery.jcrop.min','jquery.jcarousel','thickbox','jquery.galleriffic','jquery.cycle','rails.validations'
+    = javascript_include_tag "ckeditor/init"
+    = yield :head
+    = csrf_meta_tag    
+  %body
+    .main_container
+      = render "layouts/header"
+      .content_container
+        #info.login_container
+          - if current_user.blank?
+            %span.welcome_msg
+              Welcome to #{SITE_FULL_NAME}.
+          - else
+            = render 'shared/header_tab'
+        .clear_div
+        .side_panel
+          - if @event
+            = render "admin/events/lsidebar"
+          - else
+            = render "shared/lsidebar"
+          = yield :left_side_panel
+        .middle_panel
+          = render "/layouts/flashdisplay"
+          = render 'layouts/announcements'
+          %span#main_container= yield
+        .side_panel
+          - if @event
+            = render "admin/events/rsidebar"
+          - else
+            = render "shared/rsidebar"
+          = yield :right_side_panel
+      .clear_div
+      .footer= render 'shared/footer'
+      .clear_div
+    .clear_div
+    .btm_div
+    = yield :bottom
+    = yield :scripts

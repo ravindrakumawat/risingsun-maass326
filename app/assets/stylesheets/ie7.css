@@ -1,0 +1,17 @@
+/* 
+    Document   : ie7.css
+    Created on : 6 Jul, 2012, 3:14:15 PM
+    Author     : ravindra
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*= require formtastic_ie7
+*/
+root { 
+    display: block;
+}
+

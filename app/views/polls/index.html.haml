@@ -1,0 +1,17 @@
+- content_for :head do
+  = auto_discovery_link_tag :rss, profile_polls_url(@profile, :rss), :title=>"#{@profile.full_name}'s Polls"
+#column_l
+  %h2.page_title
+    = @profile.full_name
+    's polls
+    = link_to image_tag('add.png',:title=>"Create New poll"),new_profile_poll_path(@profile) if @p == @profile
+  -if @polls.empty?
+    .widget_large
+      .comments
+        = @profile.full_name
+        has no polls .
+      %span.widget_lrg_btm
+  - else
+    = render @polls
+  .clear_div
+  = will_paginate @polls

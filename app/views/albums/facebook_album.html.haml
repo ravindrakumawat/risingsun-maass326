@@ -1,0 +1,7 @@
+.widget_complete
+  %span.widget_complete_top
+  %h3.album_header Facebook Albums
+  .facebook_album
+    - @albums.each do |a|
+      = link_to "#{a}", facebook_album_photos_albums_path(:name => a)
+  %span.widget_complete_btm

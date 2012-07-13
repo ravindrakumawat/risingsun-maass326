@@ -1,0 +1,5 @@
+- comments ||= @comments
+= rounded_corner(:title => 'Wall-to-Wall') do
+  = render 'comments/form', :commentable=> @profile
+  = render :partial => 'comments/comment', :collection => comments
+  %div= will_paginate comments

@@ -1,0 +1,24 @@
+- label ||= 'Reading a Message'
+- @title = label
+-profile = Profile.find(@message.sender_id)
+.widget_large
+  %span.widget_lrg_top
+  = render 'header_links'
+  .comments
+    From:
+    = link_to profile.full_name, profile
+    %br
+    When:
+    = time_ago_in_words @message.created_at
+    ago
+    %br
+    %strong
+      Subject:
+      = @message.subject
+      %br
+      = @message.body.html_safe
+  .message_reply_button
+    - if @p.id == @message.receiver_id
+      = link_to image_tag("reply.png"), reply_message_profile_message_path(@p, @message)
+  %span.widget_lrg_btm
+ 

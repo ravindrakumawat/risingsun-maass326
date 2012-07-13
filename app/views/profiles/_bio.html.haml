@@ -1,0 +1,36 @@
+- profile ||= @profile
+= rounded_corner(:size => :small, :title => 'Profile') do
+  .profile_div
+    = image_tag(set_icon(profile, 'big'))
+    %h2= h profile.short_name(18, :is_long => true)
+    .profile_links
+      %strong Location:
+      = location_link profile
+      - if profile.can_see_field("skype_name", @p)
+        = javascript_include_tag 'http://download.skype.com/share/skypebuttons/js/skypeCheck.js'
+        = skype_status(profile.skype_name)
+      - if profile.can_see_field("linkedin_name", @p)
+        = javascript_include_tag 'http://www.linkedin.com/js/public-profile/widget-os.js'
+        = linkedin_badge(profile.linkedin_name)
+      - if profile.can_see_field("yahoo_name", @p)
+        = yahoo_status(profile.yahoo_name)
+      - if profile.can_see_field("msn_username", @p)
+        = msn_status(profile.msn_username)
+      - if profile.can_see_field("gtalk_name", @p)
+        - unless profile.gtalk_name.blank?
+          %strong GTalk:
+          = profile.gtalk_name
+          %br
+      - if profile.can_see_field("website", @p)
+        - unless profile.website.blank?
+          %strong Website:
+          = link_to (profile.website), profile.website
+      - if profile.can_see_field("blog", @p)
+        - unless profile.blog.blank?
+          %strong Blog:
+          = link_to profile.blog, profile.blog
+      %br
+      - if me
+        = link_to 'My Greetings Calendar',alumni_friends_events_path(:ics)
+        %br
+        = link_to "Send Invites", new_profile_invitation_path(@p)

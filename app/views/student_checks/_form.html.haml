@@ -1,0 +1,20 @@
+.widget_complete
+  %span.widget_complete_top
+  %h3.blog_head.event_head_width Student Checks Update/Create
+  .blog_text
+    = semantic_form_for(@student_check) do |f|
+      = f.inputs do
+        = f.input :first_name
+        = f.input :middle_name
+        = f.input :last_name
+        = f.input :year, :as => :select, :collection => BATCH_RANGE
+        = f.input :profile_id, :as => :select, :id => "profile_field"
+        = f.input :e_mail_1
+        = f.input :e_mail_2
+      %br= f.commit_button "Update and Return"
+      %br= f.commit_button "Update and Add Another"
+      %br= f.commit_button "Update and Edit"
+      - unless @student_check.new_record?
+        = link_to image_tag("cross.png", :title => 'Delete', :alt => 'Delete'), student_check_path(@student_check), :method => :delete
+        = link_to image_tag("email_go.png", :title => 'Invite', :alt => 'Invite'), send_invite_student_check_path(@student_check), :method => :post unless @student_check.emails.empty?
+  %span.widget_complete_btm

@@ -1,0 +1,11 @@
+= semantic_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+  = rounded_corner(:title => 'Change your password') do
+    = f.inputs do
+      = f.input :reset_password_token, :as => :hidden
+      = f.input :password, formtastic_zebra(:as => :password)
+      = f.input :password_confirmation, formtastic_zebra(:as => :password)
+    %button.buttons{:type => "submit"}
+      = image_tag('change-password.png')
+    .remember_links
+      = render :partial => "devise/shared/links"
+

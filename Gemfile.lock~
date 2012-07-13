@@ -1,0 +1,370 @@
+GIT
+  remote: git://github.com/collectiveidea/delayed_job.git
+  revision: 0333bf17109d1ddd3fc86cc758e0725ec76031b1
+  specs:
+    delayed_job (3.0.3)
+      activesupport (~> 3.0)
+
+GIT
+  remote: git://github.com/intridea/omniauth.git
+  revision: f611746401cbc07bfb59c83f248ff00b6048233e
+  specs:
+    omniauth (1.1.0)
+      hashie (~> 1.2)
+      rack
+
+GIT
+  remote: https://github.com/rack/rack.git
+  revision: e20baec005238f9876281c0d083fe5a4e01aa034
+  ref: e20baec005238f9876281c0d083fe5a4e01aa034
+  specs:
+    rack (1.4.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    RedCloth (4.2.9)
+    ZenTest (4.8.1)
+    actionmailer (3.2.6)
+      actionpack (= 3.2.6)
+      mail (~> 2.4.4)
+    actionpack (3.2.6)
+      activemodel (= 3.2.6)
+      activesupport (= 3.2.6)
+      builder (~> 3.0.0)
+      erubis (~> 2.7.0)
+      journey (~> 1.0.1)
+      rack (~> 1.4.0)
+      rack-cache (~> 1.2)
+      rack-test (~> 0.6.1)
+      sprockets (~> 2.1.3)
+    activemodel (3.2.6)
+      activesupport (= 3.2.6)
+      builder (~> 3.0.0)
+    activerecord (3.2.6)
+      activemodel (= 3.2.6)
+      activesupport (= 3.2.6)
+      arel (~> 3.0.2)
+      tzinfo (~> 0.3.29)
+    activeresource (3.2.6)
+      activemodel (= 3.2.6)
+      activesupport (= 3.2.6)
+    activesupport (3.2.6)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
+    acts-as-taggable-on (2.3.1)
+      rails (~> 3.0)
+    acts_as_list (0.1.6)
+    acts_as_tree (0.1.1)
+    addressable (2.2.8)
+    annotate (2.4.0)
+    arel (3.0.2)
+    attr_required (0.0.5)
+    autotest (4.4.6)
+      ZenTest (>= 4.4.1)
+    avatar (0.0.5)
+    bcrypt-ruby (3.0.1)
+    builder (3.0.0)
+    cancan (1.6.8)
+    capybara (1.1.2)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (~> 2.0)
+      xpath (~> 0.1.4)
+    childprocess (0.3.3)
+      ffi (~> 1.0.6)
+    ckeditor (3.7.1)
+      mime-types
+      orm_adapter
+    client_side_validations (3.1.4)
+    cocaine (0.2.1)
+    coffee-rails (3.2.2)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.2.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.3.3)
+    columnize (0.3.6)
+    country-select (1.1.1)
+    cucumber (1.2.1)
+      builder (>= 2.1.2)
+      diff-lcs (>= 1.1.3)
+      gherkin (~> 2.11.0)
+      json (>= 1.4.6)
+    cucumber-rails (1.3.0)
+      capybara (>= 1.1.2)
+      cucumber (>= 1.1.8)
+      nokogiri (>= 1.5.0)
+    daemons (1.0.10)
+    database_cleaner (0.8.0)
+    debugger (1.1.4)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.1.1)
+      debugger-ruby_core_source (~> 1.1.3)
+    debugger-linecache (1.1.2)
+      debugger-ruby_core_source (>= 1.1.1)
+    debugger-ruby_core_source (1.1.3)
+    delayed_job_active_record (0.3.2)
+      activerecord (> 2.1.0)
+      delayed_job (~> 3.0.0)
+    devise (2.1.2)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (~> 3.1)
+      warden (~> 1.2.1)
+    devise_invitable (1.0.2)
+      devise (>= 2.0.0)
+      rails (~> 3.0)
+    diff-lcs (1.1.3)
+    disqus (1.0.4)
+      json
+    dynamic_form (1.1.4)
+    erubis (2.7.0)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
+    factory_girl (2.6.4)
+      activesupport (>= 2.3.9)
+    factory_girl_rails (1.7.0)
+      factory_girl (~> 2.6.0)
+      railties (>= 3.0.0)
+    faker (1.0.1)
+      i18n (~> 0.4)
+    faraday (0.8.1)
+      multipart-post (~> 1.1)
+    fb_graph (2.4.17)
+      httpclient (>= 2.2.0.2)
+      rack-oauth2 (>= 0.14.4)
+      tzinfo
+    ffi (1.0.11)
+    formtastic (2.2.1)
+      actionpack (>= 3.0)
+    gem_plugin (0.2.3)
+    gherkin (2.11.1)
+      json (>= 1.4.6)
+    gravatar_image_tag (1.0.0.pre2)
+    haml (3.1.6)
+    hashie (1.2.0)
+    hike (1.2.1)
+    hpricot (0.8.6)
+    httpauth (0.1)
+    httpclient (2.2.5)
+    humanizer (2.4.3)
+    i18n (0.6.0)
+    icalendar (1.1.6)
+    journey (1.0.4)
+    jquery-rails (2.0.2)
+      railties (>= 3.2.0, < 5.0)
+      thor (~> 0.14)
+    json (1.7.3)
+    jwt (0.1.4)
+      json (>= 1.2.4)
+    launchy (2.1.0)
+      addressable (~> 2.2.6)
+    libv8 (3.3.10.4)
+    libwebsocket (0.1.3)
+      addressable
+    mail (2.4.4)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.19)
+    mongrel (1.2.0.pre2)
+      daemons (~> 1.0.10)
+      gem_plugin (~> 0.2.3)
+    multi_json (1.3.6)
+    multipart-post (1.1.5)
+    mysql2 (0.3.11)
+    nokogiri (1.5.5)
+    oauth (0.4.6)
+    oauth2 (0.8.0)
+      faraday (~> 0.8)
+      httpauth (~> 0.1)
+      jwt (~> 0.1.4)
+      multi_json (~> 1.0)
+      rack (~> 1.2)
+    omniauth-facebook (1.4.1)
+      omniauth-oauth2 (~> 1.1.0)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-oauth2 (1.1.0)
+      oauth2 (~> 0.8.0)
+      omniauth (~> 1.0)
+    omniauth-openid (1.0.1)
+      omniauth (~> 1.0)
+      rack-openid (~> 1.3.1)
+    omniauth-twitter (0.0.12)
+      multi_json (~> 1.3)
+      omniauth-oauth (~> 1.0)
+    orm_adapter (0.3.0)
+    paperclip (2.7.0)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+      cocaine (>= 0.0.2)
+      mime-types
+    pickle (0.4.11)
+      cucumber (>= 0.8)
+      rake
+    polyglot (0.3.3)
+    quiet_assets (1.0.1)
+      railties (~> 3.1)
+    rack-cache (1.2)
+      rack (>= 0.4)
+    rack-oauth2 (0.14.4)
+      activesupport (>= 2.3)
+      attr_required (>= 0.0.5)
+      httpclient (>= 2.2.0.2)
+      i18n
+      json (>= 1.4.3)
+      rack (>= 1.1)
+    rack-openid (1.3.1)
+      rack (>= 1.1.0)
+      ruby-openid (>= 2.1.8)
+    rack-ssl (1.3.2)
+      rack
+    rack-test (0.6.1)
+      rack (>= 1.0)
+    rails (3.2.6)
+      actionmailer (= 3.2.6)
+      actionpack (= 3.2.6)
+      activerecord (= 3.2.6)
+      activeresource (= 3.2.6)
+      activesupport (= 3.2.6)
+      bundler (~> 1.0)
+      railties (= 3.2.6)
+    railties (3.2.6)
+      actionpack (= 3.2.6)
+      activesupport (= 3.2.6)
+      rack-ssl (~> 1.3.2)
+      rake (>= 0.8.7)
+      rdoc (~> 3.4)
+      thor (>= 0.14.6, < 2.0)
+    rake (0.9.2.2)
+    rdoc (3.12)
+      json (~> 1.4)
+    riddle (1.5.2)
+    rspec (2.10.0)
+      rspec-core (~> 2.10.0)
+      rspec-expectations (~> 2.10.0)
+      rspec-mocks (~> 2.10.0)
+    rspec-core (2.10.1)
+    rspec-expectations (2.10.0)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.10.1)
+    rspec-rails (2.10.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec (~> 2.10.0)
+    ruby-openid (2.2.0)
+    ruby_parser (2.3.1)
+      sexp_processor (~> 3.0)
+    rubyzip (0.9.9)
+    sass (3.1.20)
+    sass-rails (3.2.5)
+      railties (~> 3.2.0)
+      sass (>= 3.1.10)
+      tilt (~> 1.3)
+    selenium-webdriver (2.24.0)
+      childprocess (>= 0.2.5)
+      libwebsocket (~> 0.1.3)
+      multi_json (~> 1.0)
+      rubyzip
+    sexp_processor (3.2.0)
+    simple_oauth (0.1.8)
+    sprockets (2.1.3)
+      hike (~> 1.2)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    therubyracer (0.10.1)
+      libv8 (~> 3.3.10)
+    thinking-sphinx (2.0.10)
+      activerecord (>= 3.0.3)
+      builder (>= 2.1.2)
+      riddle (>= 1.5.0)
+    thor (0.15.4)
+    tilt (1.3.3)
+    treetop (1.4.10)
+      polyglot
+      polyglot (>= 0.3.1)
+    twitter (3.1.1)
+      faraday (~> 0.8)
+      multi_json (~> 1.3)
+      simple_oauth (~> 0.1.6)
+    tzinfo (0.3.33)
+    uglifier (1.2.3)
+      execjs (>= 0.3.0)
+      multi_json (>= 1.0.2)
+    warden (1.2.1)
+      rack (>= 1.0)
+    webrat (0.7.3)
+      nokogiri (>= 1.2.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5.3)
+    will_paginate (3.0.3)
+    xpath (0.1.4)
+      nokogiri (~> 1.3)
+  
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  RedCloth
+  acts-as-taggable-on
+  acts_as_list
+  acts_as_tree (= 0.1.1)
+  annotate
+  autotest
+  avatar (= 0.0.5)
+  cancan
+  capybara
+  ckeditor
+  client_side_validations
+  coffee-rails
+  country-select
+  cucumber-rails
+  database_cleaner
+  debugger
+  delayed_job!
+  delayed_job_active_record
+  devise
+  devise_invitable
+  disqus
+  dynamic_form
+  factory_girl_rails (= 1.7.0)
+  faker (= 1.0.1)
+  fb_graph
+  formtastic
+  gravatar_image_tag (= 1.0.0.pre2)
+  haml
+  hpricot
+  humanizer
+  icalendar
+  jquery-rails
+  launchy
+  mongrel (= 1.2.0.pre2)
+  mysql2
+  oauth
+  omniauth!
+  omniauth-facebook
+  omniauth-openid
+  omniauth-twitter
+  paperclip (~> 2.7)
+  pickle
+  quiet_assets
+  rack!
+  rails (= 3.2.6)
+  rspec-rails (= 2.10.0)
+  ruby_parser
+  sass-rails
+  therubyracer
+  thinking-sphinx (= 2.0.10)
+  twitter
+  uglifier (= 1.2.3)
+  webrat
+  will_paginate (= 3.0.3)
+ 

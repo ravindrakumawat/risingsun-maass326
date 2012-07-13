@@ -1,0 +1,15 @@
+.profile_card.profile_action
+  .img_div
+    = link_to image_tag(set_icon(mini_profile,'small_60')), mini_profile
+    = link_to image_tag('edit.png', :title => "Edit Profile", :class => "img01"), edit_profile_path(@p) if me(mini_profile)
+  .text_div
+    %h3.name= link_to (mini_profile.short_name(20)), mini_profile, :class => "profile_name"
+    %br
+    %p= year_link(mini_profile)
+    %p= render('friends/friend_status' , :profile => mini_profile) unless me(mini_profile)
+    %p= link_to 'Direct Message', new_profile_message_path(mini_profile) unless me(mini_profile)
+    %p= link_to('Read My Blogs', profile_blogs_path(mini_profile))
+    %p= link_to('See My Polls', profile_polls_path(mini_profile))
+    %p= link_to("#{mini_profile.is_active ? 'Deactivate' : 'Active'}",  active_user_profile_path(mini_profile), :class => "user_status") if @is_admin
+  .spinner= image_tag('spinner.gif')
+

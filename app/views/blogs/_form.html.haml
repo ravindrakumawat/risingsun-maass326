@@ -1,0 +1,22 @@
+= rounded_corner(:title => "New Post") do
+  - if params[:preview_button]
+    = render 'preview'
+  %br
+  = form_for [@profile, @blog], :validates => true do |f|
+    = f.label :title, :class => "blog_labels"
+    = f.text_field :title, :title => "Title", :class => "blog_fields"
+    %br= f.label :body, :class => "blog_labels"
+    %br= f.cktext_area :body, :toolbar => 'Easy', :width => '525px', :height => '350px', :class => "blog_fields"
+    = f.label :tag_list, :class => "blog_labels"
+    = f.text_field :tag_list, :title => "Tags", :class => "blog_fields"
+    .blog_text Comma Seperated
+    .row_normal
+      - if @p.is_active
+        .poll_check_box
+          = f.check_box :public
+          Public?
+    .feedback_btn_container
+      %button.buttons{:type => "submit"}
+        = image_tag("save.png")
+      %button.buttons{:name => 'preview_button'}
+        = image_tag("preview.png")

@@ -1,0 +1,15 @@
+.forum_links
+  = link_to "back to MAASS albums", albums_path
+.widget_complete
+  %span.widget_complete_top
+  %h3.blog_head.event_head_width
+    = "#{@album.name} 's Photos"
+  - @album.photos.each do |a|
+    .album_photos
+      %h3.album_head
+        = a.caption
+        = link_to(image_tag('edit.png'), edit_album_photo_path(@album,a))
+        = link_to(image_tag('delete.png'), album_photo_path(@album,a), :method =>:delete)
+      .album_img_wrap
+        = image_tag(a.image.url('original'), :width => 180, :height => 130)
+  %span.widget_complete_btm

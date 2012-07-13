@@ -1,0 +1,12 @@
+.widget_complete
+  %span.widget_complete_top
+  %h2.widget_compelete_title= title
+  .forum_text
+    = semantic_form_for @forum do |f|
+      = f.inputs do
+        = f.input :name, :input_html => {:class => "big_text_field"}
+        = f.input :description, :as => :text, :input_html => {:class => "big_text_area"}
+      .feedback_btn_container
+        %button.buttons{:type => "submit"}
+          = image_tag('save.png')
+  %span.widget_complete_btm

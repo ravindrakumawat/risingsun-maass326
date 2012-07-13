@@ -1,0 +1,18 @@
+/* 
+    Document   : ie6.css
+    Created on : 6 Jul, 2012, 3:13:50 PM
+    Author     : ravindra
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*= require formtastic_ie6
+*/
+
+root { 
+    display: block;
+}
+

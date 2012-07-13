@@ -1,0 +1,26 @@
+%html
+  %head
+    %link{:href => "/favicon.ico", :rel => "shortcut icon" }
+    %title
+      = @title || (SITE_NAME + ": " + SITE_FULL_NAME)
+    = stylesheet_link_tag "application",'jquery-ui-1.8.7.custom','formtastic','formtastic_changes'
+    = javascript_include_tag 'jquery.min','jquery-ui.min','application','rails','rs_maps', 'jquery-ui-timepicker-addon', 'jquery.jcrop.min', 'jquery.cycle.all', 'jquery.cycle', 'jquery.cycle.lite', 'rails.validations'
+    = csrf_meta_tag
+  %body
+    .main_container
+      = render :partial=> "layouts/header"
+      .content_container
+        #info.login_container
+          - if current_user.blank?
+            %span.welcome_msg
+              Welcome to #{SITE_FULL_NAME}.
+          - else
+            = render 'shared/header_tab'
+        .clear_div
+        = render("/layouts/flashdisplay", :want_large => true)
+        = yield
+      .clear_div
+      .footer{:style => "z-index:9000"}= render :partial => 'shared/footer'
+      .clear_div
+    .clear_div
+    .btm_div

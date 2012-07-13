@@ -1,0 +1,24 @@
+- if @show_profile_side_panel
+  = render :partial => "profiles/bio"
+  = render :partial => "shared/profile_action" unless me
+  = render :partial => "shared/friends_list"
+- else
+  - if current_user.blank?
+    = render :partial => "devise/sessions/login"
+    = render :partial => "devise/sessions/login_with_other"
+  = render "profiles/members", :members => Profile.new_member, :type => "Newest Members"
+  - if params[:controller] == 'home'
+    = rounded_corner(:title => "#{SITE_NAME} Picture Gallery", :size => 'small') do
+      - unless @albums.blank?
+        %ul#mycarousel.jcarousel-skin-ie7
+          - @albums.select{|a|a.photos.present?}.each do |f|
+            %li
+              = link_to( photo_gallery_home_index_path(:photoset => f), :class=> 'thickbox', :title => f.name) do
+                = image_tag(f.photos.first.image.url('original'), :alt => f.name, :width => 80, :height => 75)
+              %span.flickr_text= f.name
+      - else
+        Photos are unavailable at this time
+= render :partial => "profiles/find_batch_details" if @p.present?
+
+:javascript
+  show_gallery();

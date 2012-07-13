@@ -1,0 +1,33 @@
+.widget_large[event]
+  %span.widget_lrg_top
+  %h3.blog_head
+    = link_to image_tag(set_icon(event.organizers.first,'small')), event.organizers.first
+    = link_to sanitize(event.title),admin_event_path(event)  
+    = link_to image_tag('edit.png', :border =>0), edit_admin_event_path(event) if check_permission?(event)
+    = link_to image_tag('delete.png',:border =>0), admin_event_path(event), :method => :delete if check_permission?(event)
+    .created_date
+      Posted by #{event.organizers.first.full_name} at #{event.updated_at.to_date.to_formatted_s(:rfc822)}
+  .blog_text
+    = event.description.html_safe
+    .event_location
+      .event_start_date
+        %span.event_address Start Date :
+        = event.start_date.to_date.to_formatted_s(:rfc822)if event.start_date
+      .event_end_date
+        %span.event_address End Date :
+        = event.end_date.to_date.to_formatted_s(:rfc822)if event.end_date
+      %br
+        %span.event_address Address :
+      %br
+      = event.place
+  - if @p.present?
+    .poll_text
+      .poll_option{:id => "event_rsvp_#{event.id}"}
+        - if event.responded? @p
+          = render 'admin/events/event_response', :event => event
+        - else
+          %strong RSVP:
+          %br
+          = render 'admin/events/rsvp', :event => event, :status => 'home_page'
+  %span.widget_lrg_btm
+  

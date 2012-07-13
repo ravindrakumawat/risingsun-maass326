@@ -1,0 +1,7 @@
+.forum_text
+  = semantic_form_for :post, :url => forum_forum_topic_forum_posts_path(@forum, @forum_topic) do |f|
+    = f.inputs do
+      = f.input :body, :as => :text, :input_html => {:class => "post_text_area_width"}
+      = f.input :owner_id, :as => :hidden, :value => @p.id
+    %button.buttons{:type => "submit"}
+      = image_tag('post.png')

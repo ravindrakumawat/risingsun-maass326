@@ -1,0 +1,24 @@
+= semantic_form_for @profile, :html => { :multipart => true }, :validate => true do |form|
+  %h2.edit_profile Edit Profile
+  %button.buttons{:type => "submit"}
+    = image_tag('Update.png')
+  .large_panel_side
+    = rounded_med_corner(:id => "set_status", :title => "Status") do
+      = render 'set_status', :f => form
+    = render 'general_info', :f => form
+    = render 'contact_info', :f => form
+    = render 'google_map', :f => form
+    %button.buttons{:type => "submit"}
+      = image_tag('Update.png')
+  .large_panel_side
+    = rounded_med_corner(:id => "address_details", :title => "Web Info") do
+      = render 'web_info', :f => form
+    = rounded_med_corner(:title => "Education Info", :id => "education_information") do
+      = render 'education_info', :f => form
+    = rounded_med_corner( :id => "work_details", :title => "Work Info") do
+      = render 'work_info', :f => form
+    = rounded_med_corner(:title => "Upload Icon", :id => "upload_photo") do
+      = render 'upload_icon', :f => form
+    = rounded_med_corner(:title => "Profile Image", :id => "Profile_image") do
+      = render 'profile_picture'
+    

@@ -1,0 +1,10 @@
+= semantic_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+  = rounded_corner(:title => 'Forgot your password?') do
+    .forgot_password_info
+      A new password will be generated and sent to this email address.
+    = f.inputs do
+      = f.input :email, formtastic_zebra
+    %button.buttons{:type => "submit"}
+      = image_tag('new-password.png')
+    .remember_links
+      = render :partial => "devise/shared/links"

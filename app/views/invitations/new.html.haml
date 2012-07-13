@@ -1,0 +1,9 @@
+= rounded_corner(:title => "Invite Batchmates") do
+  .edit_panel_profile
+    = semantic_form_for [@profile,@invitation] do |f|
+      .row_light_large
+        = f.input :emails, :as => :text, :wrapper_html => {:class => "#{zebra}_large2"}
+        .invitation_error=  raw@error
+      .feedback_btn_container
+        %button.buttons{:type => "submit"}
+          = image_tag('submit.png')

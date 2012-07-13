@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>
+      Blog Post titled
+      <%= @blog.title %> by
+      <%= @blog.sent_by %>
+    </title>
+  </head>
+  <body>
+      <table width = "627" border = "0" align = "center" cellpadding = "0" cellspacing = "0">
+      <tr>
+        <th>
+          <%= image_tag 'header_shadow.jpg' %>
+        </th>
+        <th>
+        
+        </th>
+      </tr>
+    </table>
+    <table width = "627" border = "0" align = "center" cellpadding = "0" cellspacing = "0">
+      <tr>
+        <th>
+          <%= image_tag 'mailer_header.jpg' %>
+        </th>
+      </tr>
+    </table>
+     <table width = "627" border = "0" align = "center" cellpadding = "0" cellspacing = "0">
+      <tr>
+        <th>
+           <%= @blog.title%>
+        </th>
+      </tr>
+    </table>
+     <table>
+      <tr>
+        <th>
+           <%=  @blog.body.html_safe %>
+        </th>
+      </tr>
+    </table>
+     <table width = "627" border = "0" align = "center" cellpadding = "0" cellspacing = "0">
+      <tr>
+        <th>
+          <%= image_tag 'line.jpg' %>
+        </th>
+      </tr>
+    </table>
+     <table width = "627" border = "0" align = "center" cellpadding = "0" cellspacing = "0">
+      <tr>
+        <th>
+          <%= image_tag 'footer_shadow1.jpg' %>
+        </th>
+      </tr>
+    </table>
+  
+  </body>
+</html>

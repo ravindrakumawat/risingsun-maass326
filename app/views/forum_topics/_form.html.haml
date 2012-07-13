@@ -1,0 +1,15 @@
+- if @forum_topic.blank?
+  - @forum_topic = @forum.topics.new
+.widget_complete
+  %span.widget_complete_top
+  %h2.widget_compelete_title= title
+  .forum_text
+    = semantic_form_for [@forum,@forum_topic] do |f|
+      = f.inputs do
+        = f.input :title, :input_html => {:class => "big_text_field"}
+        = f.input :forum_id, :as => :hidden
+        = f.input :owner_id, :as => :hidden, :value => @p.id
+      .feedback_btn_container
+        %button.buttons{:type => "submit"}
+          = image_tag('save.png')
+  %span.widget_complete_btm

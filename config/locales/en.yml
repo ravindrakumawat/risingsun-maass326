@@ -1,0 +1,121 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  helpers:
+    label:
+      message:
+        receiver_id: To
+      site_content:
+        parent_id: Parent
+      event:
+        start_date: Start At
+        end_at: End At
+      blog:
+        tag_list: Tags
+
+  formtastic:
+    labels:
+      profile:
+        # general info
+        first_name: First Name
+        middle_name: Middle Name
+        last_name: Last Name
+        maiden_name: Maiden Name
+        blood_group: Blood Group
+        house_name: House Name
+        date_of_birth: Date Of Birth
+        relationship_status: Relationship Status
+        anniversary_date: Anniversary Date
+        spouse_name: Spouse Name
+        professional_qualification: Professional Qualification
+        about_me: About Me
+        # contact info 
+        address_line1: Address Line1
+        address_line2: Address Line2
+        postal_code: Postal Code
+        # web info
+        blog: Blog
+        flicker_username: Flickr Screen Name
+        linkedin_name: LinkedIn Public URL
+        twitter_username: Twitter Login
+        aim_name: AIM
+        msn_username: MSN
+        yahoo_name: Yahoo UserId
+        gtalk_name: GTalk Name
+        skype_name: Skype Name
+        delicious_name: Del.icio.us Name
+        # upload icon
+        icon: Upload your Icon (<=5Mb)
+        # default permission
+        default_permission: Default Permission
+
+      education:
+        education_from_year: From Year
+        education_to_year: To Year
+
+      work:
+        company_name: Company Name
+        company_website: Company Website
+        job_description: Job Description
+
+      event:
+        start_date: Start Date
+        end_date: End Date
+
+      announcement:
+        message: Message
+        starts_at: Starts At
+        ends_at: Ends At
+
+      album:
+        name: Album Name
+
+      user:
+        current_password: Current Password
+        password: New Password
+        password_confirmation: Password Confirmation
+        email: Email
+        first_referral_person_name: Referral Person Name
+        first_referral_person_year: Referral Person Year
+        second_referral_person_name: Referral Person Name
+        second_referral_person_year: Referral Person Year
+        third_referral_person_name: Referral Person Name
+        third_referral_person_year: Referral Person Year
+        additional_message: Additional Message
+        requested_new_email: Requested New Email
+        new:
+          password: Password
+
+
+      student_check:
+        profile_id: Profile
+        e_mail_1: Email Id
+        e_mail_2: Alternate Email Id
+
+      poll:
+        question: Enter the poll question?
+        option: Option
+
+      nomination:
+        contact_details: Contact details
+        occupational_details: Occupation details
+        reason_for_nomination: What is the reason for your nomination ?
+        suggestions: What difference can you make to the association ?
+
+      invitation:
+        emails: Enter a list of email addresses separated by commas (,)
+
+      post:
+        body: Post By Followup
+
+      photo:
+        crop_x: X
+        crop_y: Y
+        crop_w: Width(=531px)
+        crop_h: Height(=264px)
+
+      feedback:
+        subject: Subject
+        message: Message
+  
